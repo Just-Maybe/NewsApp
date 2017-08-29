@@ -16,7 +16,7 @@
   
  ![image](https://github.com/qqhahaboy/NewsApp/blob/master/app/images/image5.jpg)  ![image](https://github.com/qqhahaboy/NewsApp/blob/master/app/images/image6.jpg) 
  
- ###特色
+### 特色
   
 #### * Material Design 的UI风格
    
