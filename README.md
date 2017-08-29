@@ -11,12 +11,19 @@
 
 ![image](https://github.com/qqhahaboy/NewsApp/blob/master/app/images/image1.jpg) 
 
-![image](https://github.com/qqhahaboy/NewsApp/blob/master/app/images/image2.jpg) 
+![image](https://github.com/qqhahaboy/NewsApp/blob/master/app/images/image2.jpg)  ![image](https://github.com/qqhahaboy/NewsApp/blob/master/app/images/image4.jpg) 
+  
+  
+ ![image](https://github.com/qqhahaboy/NewsApp/blob/master/app/images/image5.jpg)  ![image](https://github.com/qqhahaboy/NewsApp/blob/master/app/images/image6.jpg) 
  
- ![image](https://github.com/qqhahaboy/NewsApp/blob/master/app/images/image3.jpg) 
+ ###特色
   
- ![image](https://github.com/qqhahaboy/NewsApp/blob/master/app/images/image4.jpg) 
+  #### Material Design 的UI风格
+   
+  #### Fragment 采用懒加载数据模式节约资源
+   
+  #### 简单的自定义View 闪屏界面
+   
+  #### 封装了BaseActivity、BaseFragment、BasePresenter 3个基类
   
- ![image](https://github.com/qqhahaboy/NewsApp/blob/master/app/images/image5.jpg) 
-  
- ![image](https://github.com/qqhahaboy/NewsApp/blob/master/app/images/image6.jpg) 
+
