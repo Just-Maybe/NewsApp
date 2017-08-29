@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title">NewsApp</string>
+    <string name="loadMore">点击加载更多</string>
+    <string name="loading">加载中...</string>
+    <string name="tip">提示</string>
+    <string name="aboutMe">关于</string>
+</resources>

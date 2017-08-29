@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/PrimaryColor</item>
+        <item name="colorPrimaryDark">@color/DarkPrimaryColor</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="textColorPrimary">@color/TextColor</item>-->
+    </style>
+
+    <declare-styleable name="SplashLayout">
+        <attr name="imageBgResourceId" format="integer|reference"></attr>
+        <attr name="buttonBgResourceId" format="integer|reference"></attr>
+    </declare-styleable>
+
+    <style name="AboutMeTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/SecondaryText</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+    </style>
+</resources>

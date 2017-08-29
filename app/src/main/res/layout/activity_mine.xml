@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dog"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:titleTextColor="@color/TextColor"
+                app:layout_collapseMode="pin"
+                app:title="@string/aboutMe"
+                app:titleTextColor="@color/TextColor" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="APP简介:"
+                android:textColor="@color/PrimaryText" />
+
+            <TextView
+                style="@style/AboutMeTextStyle"
+                android:text="# 数据来源:天行数据Api" />
+
+            <TextView
+                style="@style/AboutMeTextStyle"
+                android:text="# 基于MVP+Retrofit+RxJava 架构" />
+
+            <TextView
+                style="@style/AboutMeTextStyle"
+                android:text="# 布局主要采用 SwipeRefreshLayout+ RecyclerView " />
+
+            <TextView
+                style="@style/AboutMeTextStyle"
+                android:text="# 第三方库: Glide、Gson、butterknife、Banner等 " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="APP特色:"
+                android:textColor="@color/PrimaryText" />
+
+            <TextView
+                style="@style/AboutMeTextStyle"
+                android:text="# Material Design 的UI风格 " />
+
+            <TextView
+                style="@style/AboutMeTextStyle"
+                android:text="# 封装了基于MVP的BaseActivity、BasePresenter、BaseFragment 3个基类" />
+
+            <TextView
+                style="@style/AboutMeTextStyle"
+                android:text="# Fragment 采用懒加载数据模式节约内存" />
+
+            <TextView
+                style="@style/AboutMeTextStyle"
+                android:text="# 简单的自定义View 闪屏界面 " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="关于我:"
+                android:textColor="@color/PrimaryText" />
+
+            <TextView
+                style="@style/AboutMeTextStyle"
+                android:text="# 应届毕业生" />
+
+            <TextView
+                style="@style/AboutMeTextStyle"
+                android:text="# 急需一份Android开发的实习工作(广州)" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="生活:"
+                android:textColor="@color/PrimaryText" />
+
+            <TextView
+                style="@style/AboutMeTextStyle"
+                android:text="# 爱阅读,爱篮球,爱Dota" />
+
+            <TextView
+                style="@style/AboutMeTextStyle"
+                android:layout_marginBottom="30dp"
+                android:text="# 追求新技术，coding" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

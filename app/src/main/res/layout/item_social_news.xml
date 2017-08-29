@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginTop="25dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/timeImg"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/time" />
+
+        <TextView
+            android:layout_toRightOf="@+id/timeImg"
+            android:id="@+id/newsTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/SecondaryText" />
+
+        <ImageView
+            android:id="@+id/newsImg"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_below="@id/newsTime"
+            android:layout_marginTop="15dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/newsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/newsImg"
+            android:gravity="left"
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="Test"
+            android:textColor="@color/PrimaryText"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/newsType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/newsTitle"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/news_type_bg"
+            android:text="互联网"
+            android:textColor="@color/PrimaryColor" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
