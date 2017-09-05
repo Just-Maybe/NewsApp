@@ -43,6 +43,7 @@ public class RetrofitHelper {
      */
     public static <T> T createApi(Class<T> clazz, String baseUrl) {
         Retrofit retrofit = new Retrofit.Builder()
+                .client(mOkHttpClient)
                 .baseUrl(baseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
