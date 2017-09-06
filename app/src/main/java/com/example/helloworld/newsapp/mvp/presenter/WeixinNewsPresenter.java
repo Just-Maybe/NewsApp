@@ -83,7 +83,7 @@ public class WeixinNewsPresenter extends BasePresenter<IWeixinFragmentView> {
      * 加载Banner图片
      */
     public void loadBannerData() {
-        Observable<Result<News>> observable = RetrofitHelper.createApi(NewsApi.class, ApiConstants.BASEURL).getBannerNews(5);
+        Observable<Result<News>> observable = RetrofitHelper.getNewsApi().getBannerNews(5);
         observable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<Result<News>>() {

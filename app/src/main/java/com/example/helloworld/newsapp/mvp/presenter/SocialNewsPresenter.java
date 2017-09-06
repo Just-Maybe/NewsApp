@@ -80,7 +80,7 @@ public class SocialNewsPresenter extends BasePresenter<ISocialFragmentView> {
     public void loadMoreData(final int pageNum) {
         Log.d(TAG, "loadMoreData: " + pageNum);
         addList = new ArrayList<>();
-        Observable<Result<News>> observable = RetrofitHelper.createApi(NewsApi.class, ApiConstants.BASEURL).getSocialNews(pageNum);
+        Observable<Result<News>> observable = RetrofitHelper.getNewsApi().getSocialNews(pageNum);
         observable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<Result<News>>() {

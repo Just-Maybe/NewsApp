@@ -1,6 +1,7 @@
 package com.example.helloworld.newsapp.network;
 
 import android.os.Environment;
+import android.util.Log;
 
 import com.example.helloworld.newsapp.NewsApp;
 import com.example.helloworld.newsapp.utils.NetworkUtils;
@@ -16,7 +17,6 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.internal.cache.CacheInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -25,13 +25,19 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class RetrofitHelper {
+
     private static OkHttpClient mOkHttpClient;
+
+
+    private static Cache cache;
 
     static {
         initOkHttpClient();
     }
 
-    private static Cache cache;
+    public static NewsApi getNewsApi() {
+        return createApi(NewsApi.class, ApiConstants.BASEURL);
+    }
 
     /**
      * 创建Api
@@ -43,8 +49,8 @@ public class RetrofitHelper {
      */
     public static <T> T createApi(Class<T> clazz, String baseUrl) {
         Retrofit retrofit = new Retrofit.Builder()
-                .client(mOkHttpClient)
                 .baseUrl(baseUrl)
+                .client(mOkHttpClient)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
@@ -63,12 +69,14 @@ public class RetrofitHelper {
                     cache = new Cache(cacheFile, 1024 * 1024 * 10);
                     mOkHttpClient = new OkHttpClient.Builder()
                             .cache(cache)
-                            .addNetworkInterceptor(new CacheInterceptor())
+//                            .addNetworkInterceptor(new CacheInterceptor())
                             .retryOnConnectionFailure(true)
                             .connectTimeout(30, TimeUnit.SECONDS)
                             .writeTimeout(30, TimeUnit.SECONDS)
                             .readTimeout(20, TimeUnit.SECONDS)
                             .build();
+                    Log.d("111", String.valueOf("initOkHttpClient: " + mOkHttpClient == null));
+                    Log.d("111", "initOkHttpClient: ");
                 }
             }
         }

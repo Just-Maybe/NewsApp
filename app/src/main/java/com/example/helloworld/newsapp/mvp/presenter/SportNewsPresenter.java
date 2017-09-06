@@ -39,7 +39,7 @@ public class SportNewsPresenter extends BasePresenter<ISportFragmentView> {
      * 显示数据
      */
     public void loadData() {
-        Observable<Result<News>> observable = RetrofitHelper.createApi(NewsApi.class, ApiConstants.BASEURL).getSportNews(10);
+        Observable<Result<News>> observable = RetrofitHelper.getNewsApi().getSportNews(10);
         observable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<Result<News>>() {
